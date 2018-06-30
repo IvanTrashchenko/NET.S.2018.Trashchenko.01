@@ -103,5 +103,57 @@ namespace ArrayIntegerExtensions.Tests
 
             CollectionAssert.AreEqual(expected, array);
         }
+
+        [TestMethod]
+        public void MergeSort_WithBigArray_Success()
+        {
+            int[] array = new int[10000000];
+
+            Random rand = new Random();
+            for (int i = 0; i < array.Length; i++)
+            {
+                array[i] = rand.Next();
+            }
+            ArrayIntegerExtension.MergeSort(array);
+            if (!IsSorted(array))
+            {
+                Assert.Fail();
+            }
+        }
+
+        [TestMethod]
+        public void QuickSort_WithBigArray_Success()
+        {
+            int[] array = new int[10000000];
+
+            Random rand = new Random();
+            for (int i = 0; i < array.Length; i++)
+            {
+                array[i] = rand.Next();
+            }
+            ArrayIntegerExtension.QuickSort(array);
+            if (!IsSorted(array))
+            {
+                Assert.Fail();
+            }
+        }
+
+        /// <summary>
+        /// Method which determines whether the array is sorted.
+        /// </summary>
+        /// <param name="array">Source array.</param>
+        /// <returns>True if the array is sorted; otherwise, false.</returns>
+        private static bool IsSorted(int[] array)
+        {
+            for (int i = 0; i < array.Length - 1; i++)
+            {
+                if (array[i] > array[i + 1])
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
     }
 }

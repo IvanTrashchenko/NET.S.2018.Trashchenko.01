@@ -12,6 +12,8 @@ namespace ArrayIntegerExtensions
         /// Method which performs merge sort for an array.
         /// </summary>
         /// <param name="array">Array to be sorted.</param>
+        /// <exception cref="ArgumentNullException">Thrown when array is null.</exception>
+        /// <exception cref="ArgumentException">Thrown when array is empty.</exception>
         public static void MergeSort(int[] array)
         {
             if (array == null)
@@ -33,6 +35,8 @@ namespace ArrayIntegerExtensions
         /// <param name="array">Array to be sorted.</param>
         /// <param name="start">Left border of array.</param>
         /// <param name="end">Right border of array.</param>
+        /// <exception cref="ArgumentNullException">Thrown when array is null.</exception>
+        /// <exception cref="ArgumentException">Thrown when array is empty.</exception>
         public static void MergeSort(int[] array, int start, int end)
         {
             if (array == null)
@@ -58,6 +62,8 @@ namespace ArrayIntegerExtensions
         /// Method which performs quick sort for an array.
         /// </summary>
         /// <param name="array">Array to be sorted.</param>
+        /// <exception cref="ArgumentNullException">Thrown when array is null.</exception>
+        /// <exception cref="ArgumentException">Thrown when array is empty.</exception>
         public static void QuickSort(int[] array)
         {
             if (array == null)
@@ -79,6 +85,8 @@ namespace ArrayIntegerExtensions
         /// <param name="array">Array to be sorted.</param>
         /// <param name="start">Left border of array.</param>
         /// <param name="end">Right border of array.</param>
+        /// <exception cref="ArgumentNullException">Thrown when array is null.</exception>
+        /// <exception cref="ArgumentException">Thrown when array is empty.</exception>
         public static void QuickSort(int[] array, int start, int end)
         {
             if (array == null)
