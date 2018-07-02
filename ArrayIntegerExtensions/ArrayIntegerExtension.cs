@@ -18,12 +18,12 @@ namespace ArrayIntegerExtensions
         {
             if (array == null)
             {
-                throw new ArgumentNullException(nameof(array));
+                throw new ArgumentNullException($"{array} cannot be null.");
             }
 
             if (array.Length == 0)
             {
-                throw new ArgumentException(nameof(array));
+                throw new ArgumentException($"{array} cannot be empty.");
             }
 
             MergeSort(array, 0, array.Length - 1);
@@ -41,12 +41,12 @@ namespace ArrayIntegerExtensions
         {
             if (array == null)
             {
-                throw new ArgumentNullException(nameof(array));
+                throw new ArgumentNullException($"{array} cannot be null.");
             }
 
             if (array.Length == 0)
             {
-                throw new ArgumentException(nameof(array));
+                throw new ArgumentException($"{array} cannot be empty.");
             }
 
             if (start < end)
@@ -68,12 +68,12 @@ namespace ArrayIntegerExtensions
         {
             if (array == null)
             {
-                throw new ArgumentNullException(nameof(array));
+                throw new ArgumentNullException($"{array} cannot be null.");
             }
 
             if (array.Length == 0)
             {
-                throw new ArgumentException(nameof(array));
+                throw new ArgumentException($"{array} cannot be empty.");
             }
 
             QuickSort(array, 0, array.Length - 1);
@@ -91,12 +91,12 @@ namespace ArrayIntegerExtensions
         {
             if (array == null)
             {
-                throw new ArgumentNullException(nameof(array));
+                throw new ArgumentNullException($"{array} cannot be null.");
             }
 
             if (array.Length == 0)
             {
-                throw new ArgumentException(nameof(array));
+                throw new ArgumentException($"{array} cannot be empty.");
             }
 
             int left = start, right = end;
